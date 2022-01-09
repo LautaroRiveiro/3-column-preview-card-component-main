@@ -1,0 +1,114 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.column {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  padding: 1.6rem;
+  color: var(--very-light-gray);
+  width: 135px;
+}
+
+.column img {
+  width: 2.25rem;
+}
+
+.column h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  margin: 1rem 0px 0px 0px;
+}
+
+.column p {
+  font-size: 0.55rem;
+  color: var(--transparent-white);
+  margin: 1rem 0px 3rem 0px;
+  line-height: 1rem;
+}
+
+.column button {
+  background-color: var(--very-light-gray);
+  border-radius: 20px;
+  font-size: 0.5rem;
+  width: 60%;
+  border: 2px solid var(--very-light-gray);
+  padding: 0.5rem 0px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.column button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
+.bg-sedans {
+  background-color: var(--bright-orange);
+}
+.bg-suvs {
+  background-color: var(--dark-cyan);
+}
+.bg-luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.bg-sedans button {
+  color: var(--bright-orange);
+}
+.bg-suvs button {
+  color: var(--dark-cyan);
+}
+.bg-luxury button {
+  color: var(--very-dark-cyan);
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: unset;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
